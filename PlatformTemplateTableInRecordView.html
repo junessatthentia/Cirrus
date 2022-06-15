@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Platfrom Template - Record View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="scss/cirrus.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="tc-titlebar container-fluid g-0"><div class="row">
+    </div></div>
+    <div class="tc-viewtoolbarcontainer container-fluid g-0"><div class="row">
+      <div class="col">
+      <h1 class="tc-platform-page-title">Page Title</h1>
+      </div>
+      <div class="col text-end">
+        <button type="button" class="tc-titlebar-btn btn btn-link"><svg id="Layer_1" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+          <path d="M17.8,5.5l-3.3-3.3C14.3,2.1,14.2,2,14,2H3.3C2.6,2,2,2.6,2,3.3v13.3C2,17.4,2.6,18,3.3,18h13.3c0.7,0,1.4-0.5,1.4-1.2V6.1
+         C18,5.7,17.9,5.7,17.8,5.5z M7.3,3.3h5.3v3.3H7.3V3.3z M12.7,16.7H7.3v-5.3h5.3L12.7,16.7L12.7,16.7z M14,16.7v-5.3
+         c0-0.7-0.6-1.3-1.3-1.3H7.3C6.6,10,6,10.6,6,11.3v5.3H3.3V3.3H6v3.3C6,7.4,6.6,8,7.3,8h5.3C13.4,8,14,7.4,14,6.7v-3l2.7,2.7v10.4
+         L14,16.7L14,16.7z"/></svg>Save</button>
+         <button type="button" class="tc-titlebar-btn btn btn-link"><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs></defs><title>trash-can</title><rect x="12" y="12" width="2" height="12"/><rect x="18" y="12" width="2" height="12"/><path d="M4,6V8H6V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V8h2V6ZM8,28V8H24V28Z"/>
+          <rect x="12" y="2" width="8" height="2"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"></svg>Delete</button>
+         <button type="button" class="tc-titlebar-btn btn btn-link"><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>printer</title><path d="M28,9H25V3H7V9H4a2,2,0,0,0-2,2V21a2,2,0,0,0,2,2H7v6H25V23h3a2,2,0,0,0,2-2V11A2,2,0,0,0,28,9ZM9,5H23V9H9ZM23,27H9V17H23Zm5-6H25V15H7v6H4V11H28Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"/></svg>Print</button>
+         <button type="button" class="tc-titlebar-btn btn btn-link"><?xml version="1.0" encoding="utf-8"?><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+          <title>checkmark</title>
+          <path d="M16,2C8.2,2,2,8.2,2,16s6.2,14,14,14s14-6.2,14-14S23.8,2,16,2z M16,28C9.4,28,4,22.6,4,16S9.4,4,16,4s12,5.4,12,12
+            S22.6,28,16,28z"/>
+          <rect id="_Transparent_Rectangle_" class="st0"/>
+          <polygon points="21.4,23 16,17.6 10.6,23 9,21.4 14.4,16 9,10.6 10.6,9 16,14.4 21.4,9 23,10.6 17.6,16 23,21.4 "/>
+          </svg>Close</button>
+     
+      </div>
+    </div></div>
+    <div class="tc-flexcontainer">
+        <div class="tc-leftpane">
+          <button class="tc-button-close-leftpane"><span class="tc-button-label float-start justify-content-start text-start">Close</span><span class="tc-button-icon float-end"><svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><path d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"></path><title>Close</title></svg></span></button>
+          <div class="tc-thentia-top-spacer"></div>
+          <button class="tc-rec-nav-link btn btn-link active">Bootstrap Navigation Title 1</button>
+          <button class="tc-rec-nav-link btn btn-link">Bootstrap Navigation Title 2</button>
+          <button class="tc-rec-nav-link btn btn-link">Bootstrap Navigation Title 3</button>
+          <div class="tc-rec-nav-seperator"></div>
+          <button class="tc-rec-nav-link">Files & Other</button>
+          <button class="tc-rec-nav-sublink">Audit History<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Files<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Activity<span class="tc-sublink-count">(4)</span></button>
+          <div class="tc-rec-nav-seperator"></div>
+          <button class="tc-rec-nav-link">Connections</button>
+          <button class="tc-rec-nav-sublink">Record Subcategory<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Record Subcategory<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Record Subcategory<span class="tc-sublink-count">(4)</span></button>
+        </div>
+        
+        <div class="tc-rightpane"><div class="container">
+          <div class="row">
+            <div class="col">
+        <h1 class="tc-portal-page-title">Page Title</h1>
+        <p class="required-statement body-small">All information with a <span class="required">*</span> is a required field.</p>
+        <h2>Section Title</h2>
+        <p>Patterns are best practice solutions for how a user achieves a goal. They show reusable combinations of components and templates that address common user objectives with sequences and flows.</p>
+            </div>
+          </div>
+          <div class="row">
+        <form class="col container">
+          <div class="row mb-3">
+            <div class="col-md-4 col-sm-6">
+              <label for="exampleFullName" class="form-label">First Name<span class="required"> *</span></label>
+              <input type="text" class="form-control" id="exampleFullName">
+            </div>
+            <div class="col-md-4 col-sm-6">
+            <label for="exampleFullName" class="form-label">Middle Name</label>
+            <input type="text" class="form-control" id="exampleFullName">
+            </div>
+            <div class="col-md-4 col-sm-12">
+            <label for="exampleFullName" class="form-label">Last Name<span class="required"> *</span></label>
+            <input type="text" class="form-control" id="exampleFullName">
+            </div>
+          </div>
+          <div class="row mb-3"><div class="col">
+            <label for="exampleInputEmail1" class="form-label">Email address<span class="required"> *</span></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div></div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password<span class="required"> *</span></label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <fieldset>
+            <legend class="radio-question legend-small">This is an example of a radio question <span class="required"> *</span></legend>
+              <div id="emailHelp" class="form-text">This would be some text that might be of some help to you.</div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Yes">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="No">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                <label class="form-check-label" for="inlineRadio3">Unset (disabled)</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="mb-3">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">This is an attestation style question made with a checkbox </label>
+            <div id="attestationHelp" class="form-text checkbox-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <p>File upload body/description are.</p>
+            </p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">File Upload<span class="required"> *</span></label>
+            <div class="file-drop-area">
+              <svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 18L12.41 19.41 15 16.83 15 29 17 29 17 16.83 19.59 19.41 21 18 16 13 11 18z"></path><path d="M23.5,22H23V20h.5a4.5,4.5,0,0,0,.36-9L23,11l-.1-.82a7,7,0,0,0-13.88,0L9,11,8.14,11a4.5,4.5,0,0,0,.36,9H9v2H8.5A6.5,6.5,0,0,1,7.2,9.14a9,9,0,0,1,17.6,0A6.5,6.5,0,0,1,23.5,22Z"></path><title>File upload</title></svg>
+              <div>
+                <span class="file-message"> Choose file or drag and drop files here</span>
+                <p class="body-small file-help">Supported file types are.jpg or .png
+                <br>Max file size is 2 MB.</p>
+                <input class="file-input" type="file" multiple>
+              </div>
+            </div>
+            <div class="files-uploaded"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="row">
+            </div>
+        </div>
+          </div></div>
+        </div>
+  </body>
+</html>

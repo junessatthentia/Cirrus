@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Platfrom Template - Record View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="scss/cirrus.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="tc-titlebar container-fluid g-0"><div class="row"><div class="col d-flex">
+      <div class="tc-logo-collapsed d-inline"><div class="tc-register-icon"></div></div>
+      <button class="tc-system-menu btn"><svg class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs></defs><title>menu</title><rect x="4" y="6" width="24" height="2"/><rect x="4" y="24" width="24" height="2"/><rect x="4" y="12" width="24" height="2"/><rect x="4" y="18" width="24" height="2"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"/></svg></button>
+      <div class="d-inline-block tc-breadcrumb-bar"><button class="tc-breadcrumb btn btn-link">Home</button><button class="tc-breadcrumb btn btn-link">Link</button><div class="tc-breadcrumb-current d-inline">Current Page</div></div>
+    </div><div class="col text-end tc-rightnav">
+      <button id="user-button" class="btn"><div id="user-initials">TC</div><svg class="tc-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="8px" height="4px" viewBox="0 0 8 4" style="enable-background:new 0 0 8 4;" xml:space="preserve">
+     <polygon points="8,0 4,4 0,0 "/>
+     </svg></button>
+      <button id="notifications-button" class="btn position-relative"><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path d="M28.7071,19.293,26,16.5859V13a10.0136,10.0136,0,0,0-9-9.9492V1H15V3.0508A10.0136,10.0136,0,0,0,6,13v3.5859L3.2929,19.293A1,1,0,0,0,3,20v3a1,1,0,0,0,1,1h7v.7768a5.152,5.152,0,0,0,4.5,5.1987A5.0057,5.0057,0,0,0,21,25V24h7a1,1,0,0,0,1-1V20A1,1,0,0,0,28.7071,19.293ZM19,25a3,3,0,0,1-6,0V24h6Zm8-3H5V20.4141L7.707,17.707A1,1,0,0,0,8,17V13a8,8,0,0,1,16,0v4a1,1,0,0,0,.293.707L27,20.4141Z"/>
+        <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"/>
+        </svg><div id="notifications-count" class="notifications-count">99</div></button>
+      <button id="modules-button" class="btn"><svg class="tc-icon tc-icon20" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path d="M8,4V8H4V4Zm2-2H2v8h8Zm8,2V8H14V4Zm2-2H12v8h8Zm8,2V8H24V4Zm2-2H22v8h8ZM8,14v4H4V14Zm2-2H2v8h8Zm8,2v4H14V14Zm2-2H12v8h8Zm8,2v4H24V14Zm2-2H22v8h8ZM8,24v4H4V24Zm2-2H2v8h8Zm8,2v4H14V24Zm2-2H12v8h8Zm8,2v4H24V24Zm2-2H22v8h8Z"/>
+        <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"/>
+      </svg>
+      </button>
+    </div>
+    </div></div>
+    <div class="tc-viewtoolbarcontainer container-fluid g-0"><div class="row">
+      <div class="col">
+      <h1 class="tc-platform-page-title">Page Title</h1>
+      </div>
+      <div class="col text-end">
+        <button type="button" class="tc-titlebar-btn btn btn-link"><svg id="Layer_1" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+          <path d="M17.8,5.5l-3.3-3.3C14.3,2.1,14.2,2,14,2H3.3C2.6,2,2,2.6,2,3.3v13.3C2,17.4,2.6,18,3.3,18h13.3c0.7,0,1.4-0.5,1.4-1.2V6.1
+         C18,5.7,17.9,5.7,17.8,5.5z M7.3,3.3h5.3v3.3H7.3V3.3z M12.7,16.7H7.3v-5.3h5.3L12.7,16.7L12.7,16.7z M14,16.7v-5.3
+         c0-0.7-0.6-1.3-1.3-1.3H7.3C6.6,10,6,10.6,6,11.3v5.3H3.3V3.3H6v3.3C6,7.4,6.6,8,7.3,8h5.3C13.4,8,14,7.4,14,6.7v-3l2.7,2.7v10.4
+         L14,16.7L14,16.7z"/></svg>Save</button>
+         <button type="button" class="tc-titlebar-btn btn btn-link"><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs></defs><title>trash-can</title><rect x="12" y="12" width="2" height="12"/><rect x="18" y="12" width="2" height="12"/><path d="M4,6V8H6V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V8h2V6ZM8,28V8H24V28Z"/>
+          <rect x="12" y="2" width="8" height="2"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"></svg>Delete</button>
+         <button type="button" class="tc-titlebar-btn btn btn-link"><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>printer</title><path d="M28,9H25V3H7V9H4a2,2,0,0,0-2,2V21a2,2,0,0,0,2,2H7v6H25V23h3a2,2,0,0,0,2-2V11A2,2,0,0,0,28,9ZM9,5H23V9H9ZM23,27H9V17H23Zm5-6H25V15H7v6H4V11H28Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"/></svg>Print</button>
+         <button type="button" class="tc-titlebar-btn btn btn-link"><?xml version="1.0" encoding="utf-8"?><svg id="icon" class="tc-icon tc-icon20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+          <title>checkmark</title>
+          <path d="M16,2C8.2,2,2,8.2,2,16s6.2,14,14,14s14-6.2,14-14S23.8,2,16,2z M16,28C9.4,28,4,22.6,4,16S9.4,4,16,4s12,5.4,12,12
+            S22.6,28,16,28z"/>
+          <rect id="_Transparent_Rectangle_" class="st0"/>
+          <polygon points="21.4,23 16,17.6 10.6,23 9,21.4 14.4,16 9,10.6 10.6,9 16,14.4 21.4,9 23,10.6 17.6,16 23,21.4 "/>
+          </svg>Close</button>
+     
+      </div>
+    </div></div>
+    <div class="tc-flexcontainer">
+        <div class="tc-leftpane min-vh-100">
+          <div class="tc-thentia-top-spacer"></div>
+          <button class="tc-rec-nav-link btn btn-link active">Bootstrap Navigation Title 1</button>
+          <button class="tc-rec-nav-link btn btn-link">Bootstrap Navigation Title 2</button>
+          <button class="tc-rec-nav-link btn btn-link">Bootstrap Navigation Title 3</button>
+          <div class="tc-rec-nav-seperator"></div>
+          <button class="tc-rec-nav-link">Files & Other</button>
+          <button class="tc-rec-nav-sublink">Audit History<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Files<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Activity<span class="tc-sublink-count">(4)</span></button>
+          <div class="tc-rec-nav-seperator"></div>
+          <button class="tc-rec-nav-link">Connections</button>
+          <button class="tc-rec-nav-sublink">Record Subcategory<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Record Subcategory<span class="tc-sublink-count">(4)</span></button>
+          <button class="tc-rec-nav-sublink">Record Subcategory<span class="tc-sublink-count">(4)</span></button>
+        </div>
+        
+        <div class="tc-rightpane"><div class="container">
+          <div class="row">
+            <div class="col">
+              <h1 class="tc-portal-page-title">Page Title</h1>
+              <p class="required-statement body-small">All information with a <span class="required">*</span> is a required field.</p>
+              <h2>Section Title</h2>
+              <p>Patterns are best practice solutions for how a user achieves a goal. They show reusable combinations of components and templates that address common user objectives with sequences and flows.</p>
+            </div>
+          </div>
+          <div class="row">
+          <form class="col container">
+            <div class="row mb-3">
+              <div class="col-md-4 col-sm-6">
+                <label for="exampleFullName" class="form-label">First Name<span class="required"> *</span></label>
+                <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+              <div class="col-md-4 col-sm-6">
+              <label for="exampleFullName" class="form-label">Middle Name</label>
+              <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+              <div class="col-md-4 col-sm-12">
+              <label for="exampleFullName" class="form-label">Last Name<span class="required"> *</span></label>
+              <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+            </div>
+            <div class="row mb-3"><div class="col">
+              <label for="exampleInputEmail1" class="form-label">Email address<span class="required"> *</span></label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div></div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password<span class="required"> *</span></label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <fieldset>
+              <legend class="radio-question legend-small">This is an example of a radio question <span class="required"> *</span></legend>
+                <div id="emailHelp" class="form-text">This would be some text that might be of some help to you.</div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Yes">
+                  <label class="form-check-label" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="No">
+                  <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                  <label class="form-check-label" for="inlineRadio3">Unset (disabled)</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="mb-3">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">This is an attestation style question made with a checkbox </label>
+              <div id="attestationHelp" class="form-text checkbox-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <p>File upload body/description are.</p>
+              </p>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">File Upload<span class="required"> *</span></label>
+              <div class="file-drop-area">
+                <svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 18L12.41 19.41 15 16.83 15 29 17 29 17 16.83 19.59 19.41 21 18 16 13 11 18z"></path><path d="M23.5,22H23V20h.5a4.5,4.5,0,0,0,.36-9L23,11l-.1-.82a7,7,0,0,0-13.88,0L9,11,8.14,11a4.5,4.5,0,0,0,.36,9H9v2H8.5A6.5,6.5,0,0,1,7.2,9.14a9,9,0,0,1,17.6,0A6.5,6.5,0,0,1,23.5,22Z"></path><title>File upload</title></svg>
+                <div>
+                  <span class="file-message"> Choose file or drag and drop files here</span>
+                  <p class="body-small file-help">Supported file types are.jpg or .png
+                  <br>Max file size is 2 MB.</p>
+                  <input class="file-input" type="file" multiple>
+                </div>
+              </div>
+              <div class="files-uploaded"></div>
+            </div>
+            <div class="form-group position-relative mb-3">
+              <label class="form-label" for="exampleFormControlSelect1">Example select</label>
+              <select class="form-control tc-select" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group position-relative mb-3">
+              <label class="form-label" for="exampleFormControlSelect1">Example select</label>
+              <select class="form-control tc-select-configure" id="exampleFormControlSelect1">
+                <option selected>Select</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <button class="btn btn-configure"><svg class="tc-icon tc-icon20" id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>settings</title><path d="M27,16.76c0-.25,0-.5,0-.76s0-.51,0-.77l1.92-1.68A2,2,0,0,0,29.3,11L26.94,7a2,2,0,0,0-1.73-1,2,2,0,0,0-.64.1l-2.43.82a11.35,11.35,0,0,0-1.31-.75l-.51-2.52a2,2,0,0,0-2-1.61H13.64a2,2,0,0,0-2,1.61l-.51,2.52a11.48,11.48,0,0,0-1.32.75L7.43,6.06A2,2,0,0,0,6.79,6,2,2,0,0,0,5.06,7L2.7,11a2,2,0,0,0,.41,2.51L5,15.24c0,.25,0,.5,0,.76s0,.51,0,.77L3.11,18.45A2,2,0,0,0,2.7,21L5.06,25a2,2,0,0,0,1.73,1,2,2,0,0,0,.64-.1l2.43-.82a11.35,11.35,0,0,0,1.31.75l.51,2.52a2,2,0,0,0,2,1.61h4.72a2,2,0,0,0,2-1.61l.51-2.52a11.48,11.48,0,0,0,1.32-.75l2.42.82a2,2,0,0,0,.64.1,2,2,0,0,0,1.73-1L29.3,21a2,2,0,0,0-.41-2.51ZM25.21,24l-3.43-1.16a8.86,8.86,0,0,1-2.71,1.57L18.36,28H13.64l-.71-3.55a9.36,9.36,0,0,1-2.7-1.57L6.79,24,4.43,20l2.72-2.4a8.9,8.9,0,0,1,0-3.13L4.43,12,6.79,8l3.43,1.16a8.86,8.86,0,0,1,2.71-1.57L13.64,4h4.72l.71,3.55a9.36,9.36,0,0,1,2.7,1.57L25.21,8,27.57,12l-2.72,2.4a8.9,8.9,0,0,1,0,3.13L27.57,20Z" transform="translate(0 0)"/><path d="M16,22a6,6,0,1,1,6-6A5.94,5.94,0,0,1,16,22Zm0-10a3.91,3.91,0,0,0-4,4,3.91,3.91,0,0,0,4,4,3.91,3.91,0,0,0,4-4A3.91,3.91,0,0,0,16,12Z" transform="translate(0 0)"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"/></svg></button>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" for="">Example Rich Text Editor</label>
+              <textarea id="editor"></textarea>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" for="">Example Date</label>
+              <input class="form-control" type="date" id="date">
+            </div>
+            <div class="row justify-content-center mb-3">
+                  <select data-placeholder="Select Categories" multiple class="form-control chosen-select" id="multiple-label-example" tabindex="8">
+                    <option>Design</option>
+                    <option>HTML5</option>
+                    <option>CSS3</option>
+                    <option>jQuery</option>
+                    <option>BS4</option>
+                    <option>Bootstrap</option>
+                    <option>WordPress</option>
+                    <option>FrontEnd</option>
+                  </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+        </div></div>
+      </div>
+      <div class="tc-systray container-fluid g-0">
+        <div class="tc-systray-container d-flex">
+          <button class="btn tc-systray-item">Queue Items<svg id="icon" class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+          <button class="btn tc-systray-item tc-tab-active">Queue Items<svg id="icon" class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+        </div>
+        <div class="tc-bottomactions">
+
+        </div>
+      </div>
+  </body>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/multiselect.js"></script>
+  <script src="https://cdn.tiny.cloud/1/k3w0locs3s5tfqyrwqkgmw7h6c66tysw6fq6nhmq54qnjr0p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="js/cirrus.js" referrerpolicy="origin"></script>
+</html>
