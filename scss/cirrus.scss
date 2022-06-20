@@ -1,4 +1,4 @@
-@import "../bootstrap/scss/bootstrap";
+
 
 /*
 ****** INDEX ******
@@ -37,6 +37,8 @@ $thentiafuscia: $fuschia30;
 $button-default-font: $regular 16px/20px 'Inter', sans-serif;
 $h1-platform-font: $medium 24px/40px 'Inter', sans-serif;
 $component-badge-font: $medium 14px/22px 'Inter', sans-serif;
+$input-font: $regular 14px/22px 'Inter', sans-serif;
+$button-small-font: $medium 12px/12px 'Inter', sans-serif;
 
 // *** THEME DEFINITIONS
 $default-bg-color: $grey0;
@@ -46,12 +48,12 @@ $active-link-color: $thentiapurple;
 $visited-link-color: $purple80;
 $default-font: $regular 16px/24px 'Inter', sans-serif; ;
 $default-font-color: $grey85AAA;
-// Create your own map
-$custom-colors: (
-  "custom-color": #900
-);
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);
+// // Create your own map
+// $custom-colors: (
+//   "custom-color": #900
+// );
+// // Merge the maps
+// $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // *** THENTIA LOGOS & ICONS
 .tc-register-icon{
@@ -189,6 +191,38 @@ body {
       fill: $grey0;
     }
   }
+  .tc-bottomactions .btn {
+    margin: 11px 0;
+    font: $button-small-font;
+  }
+
+  .tc-tab-count{
+    color: $grey80;
+    background-color: $grey30;
+    border-radius: 13px;
+
+    .tc-icon{
+      fill: $grey80;
+      margin-left: 5px;
+    }
+
+    &:hover, &:focus{
+      background-color: $active-link-color;
+      color: $grey0;
+
+      .tc-icon{
+        fill: $grey0;
+      }
+    }
+  }
+
+  .tc-clear-all{
+    &:hover, &:focus{
+      color: $active-link-color;
+      text-decoration: underline;
+    }
+  }
+  
 }
 
 .tc-thentia-top-spacer{
@@ -406,7 +440,7 @@ button svg.icon20.iconLeft{
     .tc-icon {
       margin-bottom: 4px;
     }
-    &:hover .tc-icon{
+    &:hover .tc-icon, &:focus .tc-icon{
       fill: $active-link-color;
     }
     &:visited .tc-icon{
@@ -418,9 +452,12 @@ button svg.icon20.iconLeft{
 .form-control{
   background-color: $grey15;
   border: none;
+  box-sizing: border-box;
+  height: 40px;
   border-radius: 0px;
   font: $regular 14px/16px 'Inter', sans-serif;
-  padding: 12px;
+  padding: 10px;
+  
 
   &:not(:placeholder-shown) {
     border-bottom: 1px solid $default-font-color;
@@ -429,7 +466,9 @@ button svg.icon20.iconLeft{
     border-bottom: 1px solid $grey70;
   }
   &:focus{
-    border-bottom: 1px solid $active-link-color;
+    -webkit-box-shadow: none;
+          box-shadow: none;
+    border: 2px solid $purple40;
   }
 }
 .form-text{
@@ -440,10 +479,15 @@ button svg.icon20.iconLeft{
 }
 .form-check-input[type="checkbox"]{
   border-radius: 2px;
-  border: 1px solid $blue60;
-}
-.form-check-input[type="checkbox"]:checked{
-  background-color: $blue60;
+  border: 1px solid $active-link-color;
+  
+  &:focus{
+    -webkit-box-shadow: 0 0 4px $active-link-color;
+    box-shadow: 0 0 4px $active-link-color;
+  }
+  &:checked{
+  background-color: $active-link-color;
+  }
 }
 .checkbox-text{
   margin: -2px 0 0 21px;
@@ -507,12 +551,12 @@ button svg.icon20.iconLeft{
   margin-bottom: 0;
 }
 
-input[type="radio"] {
+.form-check-input[type="radio"] {
   position: relative;
   display: inline-block;
 
   border-radius: 100%;
-  border-color: $blue60;
+  border: 1px solid $active-link-color;
   
   // Radio
   // -----
@@ -526,13 +570,15 @@ input[type="radio"] {
     width: 16px;
     height: 16px;
     background: $grey0;
-    border: 1px solid $blue60;
+    border: 1px solid $active-link-color;
     border-radius: 100%;
   }
   
   &:checked{
     background: $grey0;
     position: relative;
+    -webkit-box-shadow: 0 0 4px $active-link-color;
+    box-shadow: 0 0 4px $active-link-color;
   }
 
   &:checked::before {
@@ -541,7 +587,7 @@ input[type="radio"] {
     top: 4px;
     width: 6px;
     height: 6px;
-    background: $blue60;
+    background: $active-link-color;
   }
 
   &:checked::after {
@@ -561,16 +607,33 @@ input[type="radio"] {
   }
 }
 
+//Select Dropdown
+.select-placeholder{ display: none;}
+
 //*** Multi Select
+.chosen-container {
+  font: $input-font;
+}
 .chosen-container-active .chosen-choices {
-  border-bottom: 1px solid $active-link-color;
+  border: 2px solid $purple40;
 }
 
 ul.chosen-choices {
-  padding: 6px 16px;
+  padding: 6px 8px;
   background-color: $grey15;
   border-bottom: 1px solid $default-font-color;
+  margin-bottom: 0;
 }
+
+.chosen-container-multi .chosen-drop .result-selected {
+  color: $grey70;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-color: $active-link-color;
+  color: $grey0;
+}
+
 
 //*** File Picker
 .file-drop-area {

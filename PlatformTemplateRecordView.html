@@ -159,8 +159,8 @@
             </div>
             <div class="form-group position-relative mb-3">
               <label class="form-label" for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control tc-select-configure" id="exampleFormControlSelect1">
-                <option selected>Select</option>
+              <select class="form-control tc-select-configure" id="exampleFormControlSelect1" placeholder="Select">
+                <option class="select-placeholder" value="" disabled selected>Select</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -181,7 +181,7 @@
               <label class="form-label" for="">Example Date</label>
               <input class="form-control" type="date" id="date">
             </div>
-            <div class="row justify-content-center mb-3">
+            <div class="form-group mb-3">
                   <select data-placeholder="Select Categories" multiple class="form-control chosen-select" id="multiple-label-example" tabindex="8">
                     <option>Design</option>
                     <option>HTML5</option>
@@ -198,15 +198,23 @@
           </div>
         </div></div>
       </div>
-      <div class="tc-systray container-fluid g-0">
-        <div class="tc-systray-container d-flex">
-          <button class="btn tc-systray-item">Queue Items<svg id="icon" class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
-          <button class="btn tc-systray-item tc-tab-active">Queue Items<svg id="icon" class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+      <div class="tc-systray container-fluid g-0"><div class="row">
+        <div class="tc-systray-container col-md-10 d-flex">
+          <button class="btn tc-systray-item">Queue Items<svg class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+          <button class="btn tc-systray-item">Queue Items<svg class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+          <button class="btn tc-systray-item">Queue Items<svg class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+          <button class="btn tc-systray-item">Queue Items<svg class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+          <button class="btn tc-systray-item">Queue Items<svg class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
+          <button class="btn tc-systray-item tc-tab-active">Queue Items<svg class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button>
         </div>
-        <div class="tc-bottomactions">
-
+        <div class="tc-bottomactions col-md-2 text-end">
+          <button class="btn tc-tab-count">3<svg class="tc-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="8px" height="4px" viewBox="0 0 8 4" style="enable-background:new 0 0 8 4;" xml:space="preserve">
+            <polygon points="0,4 4,0 8,4 "/></svg>
+          </button>
+          <button class="btn tc-clear-all">Clear All</button>
         </div>
-      </div>
+      </div></div>
   </body>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/chosen.jquery.min.js"></script>
