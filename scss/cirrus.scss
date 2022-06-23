@@ -44,6 +44,7 @@ $button-small-font: $medium 12px/12px 'Inter', sans-serif;
 $default-bg-color: $grey0;
 $secondary-bg-color: $grey20;
 $titlebar-bg-color: $purple80;
+$border-hover-bg-color: $grey35;
 $active-link-color: $thentiapurple;
 $visited-link-color: $purple80;
 $default-font: $regular 16px/24px 'Inter', sans-serif; ;
@@ -97,7 +98,7 @@ body {
   }
   .tc-system-menu {
     padding: 0px 18px;
-    background-color: $grey35;
+    background-color: $border-hover-bg-color;
     border: none;
     &:hover{
       background-color: $grey45;
@@ -163,19 +164,20 @@ body {
 .tc-leftpane{
   width: 360px;
   background: $grey15;
+  border-right: 1px solid $border-hover-bg-color;
 }
 .tc-rightpane{
-  padding: 40px 64px;
+  padding: 40px 64px 128px 64px;
 }
 
 .tc-systray{
   position: fixed;
   bottom: 0;
   background-color: $grey10;
-  border-top: 1px solid $grey35;
+  border-top: 1px solid $border-hover-bg-color;
 
   .tc-systray-item{
-    border-right: 1px solid $grey35;
+    border-right: 1px solid $border-hover-bg-color;
     padding: 11px 16px;
     .tc-icon {
       margin-left: 16px;
@@ -249,22 +251,23 @@ body {
   }
 }
 .tc-rec-nav-link{
-  text-align: left;
-  color: $default-font-color;
-  text-decoration: none;
+  display: block;
   width: 100%;
+  text-align: left;
+  text-decoration: none;
   border: none;
   background: none;
   padding: 0 24px;
   font: $semibold 14px/28px 'Inter', sans-serif;
+  color: $default-font-color;
   
   &:hover{
     color: $active-link-color;
-    background: $grey35;
+    background: $border-hover-bg-color;
   }
 }
 .tc-rec-nav-link.active{
-  background: $grey35;
+  background: $border-hover-bg-color;
   color: $active-link-color;
   
   &::before{
@@ -275,22 +278,38 @@ body {
   }
 }
 .tc-rec-nav-sublink{
+  display: block;
   width: 100%;
   text-align: left;
   border: none;
   background: none;
   padding: 0 24px;
   font: $regular 14px/28px 'Inter', sans-serif;
-  
+  text-decoration: none;
+  color: $default-font-color;
+
   &:hover{
     color: $active-link-color;
-    background: $grey35;
+    background: $border-hover-bg-color;
   }
 }
 .tc-rec-nav-sublink{
   .tc-sublink-count{
     font: $medium 12px/16px 'Inter', sans-serif;
     padding-left: 8px;
+  }
+}
+.tc-rec-nav-sublink.active {
+  color: $active-link-color;
+  background-color: $border-hover-bg-color;
+
+  &::before {
+    content: " ";
+    display: block;
+    border-left: 4px solid purple;
+    height: 28px;
+    position: absolute;
+    left: 0;
   }
 }
 .tc-rec-nav-seperator {
@@ -368,7 +387,7 @@ p.body-small{
   color: $blue60;
   text-decoration: none;
 }.btn-tertiary:hover{
-  background-color: $grey35;
+  background-color: $border-hover-bg-color;
   color: $blue60;
 }.btn-tertiary:focus {
   background-color: $grey45;
@@ -521,7 +540,7 @@ span.tox-statusbar__branding {
 .tc-titlebar-btn {
   color: $default-font-color;
   text-decoration: none;
-  margin: 16px 8px;
+  margin: 17px 8px;
   
   .tc-icon {
     margin: -3px 4px 0 0;

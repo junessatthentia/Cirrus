@@ -121,10 +121,11 @@ body {
 .tc-leftpane {
   width: 360px;
   background: #FAFAFA;
+  border-right: 1px solid #ECECEC;
 }
 
 .tc-rightpane {
-  padding: 40px 64px;
+  padding: 40px 64px 128px 64px;
 }
 
 .tc-systray {
@@ -199,14 +200,15 @@ body {
 }
 
 .tc-rec-nav-link {
-  text-align: left;
-  color: #414141;
-  text-decoration: none;
+  display: block;
   width: 100%;
+  text-align: left;
+  text-decoration: none;
   border: none;
   background: none;
   padding: 0 24px;
   font: 600 14px/28px "Inter", sans-serif;
+  color: #414141;
 }
 .tc-rec-nav-link:hover {
   color: #782B90;
@@ -225,12 +227,15 @@ body {
 }
 
 .tc-rec-nav-sublink {
+  display: block;
   width: 100%;
   text-align: left;
   border: none;
   background: none;
   padding: 0 24px;
   font: 400 14px/28px "Inter", sans-serif;
+  text-decoration: none;
+  color: #414141;
 }
 .tc-rec-nav-sublink:hover {
   color: #782B90;
@@ -240,6 +245,19 @@ body {
 .tc-rec-nav-sublink .tc-sublink-count {
   font: 500 12px/16px "Inter", sans-serif;
   padding-left: 8px;
+}
+
+.tc-rec-nav-sublink.active {
+  color: #782B90;
+  background-color: #ECECEC;
+}
+.tc-rec-nav-sublink.active::before {
+  content: " ";
+  display: block;
+  border-left: 4px solid purple;
+  height: 28px;
+  position: absolute;
+  left: 0;
 }
 
 .tc-rec-nav-seperator {
@@ -493,7 +511,7 @@ span.tox-statusbar__branding {
 .tc-titlebar-btn {
   color: #414141;
   text-decoration: none;
-  margin: 16px 8px;
+  margin: 17px 8px;
 }
 .tc-titlebar-btn .tc-icon {
   margin: -3px 4px 0 0;
