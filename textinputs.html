@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cirrus Library & Platform Templates</title>
+    <title>Cirrus Library - Text Inputs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     </div></div>
     <div class="tc-viewtoolbarcontainer container-fluid g-0"><div class="row">
       <div class="col">
-      <h1 class="tc-platform-page-title">Cirrus Library & Platform Templates</h1>
+      <h1 class="tc-platform-page-title">Text Inputs</h1>
       </div>
       <div class="col text-end">
       </div>
@@ -24,32 +24,103 @@
     <div class="tc-flexcontainer">
         <div class="tc-leftpane min-vh-100">
           <div class="tc-thentia-top-spacer"></div>
-          <span class="tc-rec-nav-link active" href="index.html">Home</span>
+          <a class="tc-rec-nav-link" href="index.html">Home</a>
           <div class="tc-rec-nav-seperator"></div>
           <button class="tc-rec-nav-link">Platform Templates</button>
           <a class="tc-rec-nav-sublink" href="PlatformTemplateTableView.html">Table View</a>
           <a class="tc-rec-nav-sublink" href="PlatformTemplateRecordView.html">Record View</a>
           <a class="tc-rec-nav-sublink" href="PlatformTemplateTableInRecordView.html">Table in Record View</a>
           <div class="tc-rec-nav-seperator"></div>
-          <button class="tc-rec-nav-link">Forms</button>
-          <a class="tc-rec-nav-sublink" href="textinputs.html">Radio Buttons & Checkboxes</a>
-          <a class="tc-rec-nav-sublink" href="textinputs.html">Text Inputs</a>
-          <a class="tc-rec-nav-sublink" href="formvalidation.html">Form Validation</a>
-          <button class="tc-rec-nav-link">Components</button>
-          <a class="tc-rec-nav-sublink" href="buttons.html">Buttons</a>
+          <button class="tc-rec-nav-link">Cirrus Library</button>
+          <span class="tc-rec-nav-sublink active">Text Inputs</span>
+          <a href="formvalidation.html" class="tc-rec-nav-sublink">Form Validation</a>
         </div>
-        
+          
         <div class="tc-rightpane"><div class="container">
           <div class="row">
             <div class="col">
-              <h1 class="tc-portal-page-title">Welcome to the Cirrus Library & Platform Demo</h1>
-              <p>Cirrus is Thentia's Design System.</p>
-              <p>Here you'll find useful page templates for Platform as well as Cirrus Library's base UI Components and building blocks.</p>
-              <p>Feel free to browse around and tinker! Simply let us know if you find any loose ends & odds or if you need a new UI component to compliment a new feature!</p>
+              <h1 class="tc-portal-page-title">Text Inputs</h1>
+              <h2>Default</h2>
             </div>
           </div>
-          
+          <div class="row">
+          <form class="col container">
+            <div class="row mb-3">
+              <div class="col-md-4 col-sm-6">
+                <label for="exampleFullName" class="form-label">First Name<span class="required"> *</span></label>
+                <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+              <div class="col-md-4 col-sm-6">
+              <label for="exampleFullName" class="form-label">Middle Name</label>
+              <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+              <div class="col-md-4 col-sm-12">
+              <label for="exampleFullName" class="form-label">Last Name<span class="required"> *</span></label>
+              <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Text Input (w/ helper)<span class="required"> *</span></label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <p class="form-text">This is an example of helper text. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="exampleFullName" class="form-label">Required Field<span class="required"> *</span></label>
+                <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+              <div class="col-md-6">
+              <label for="exampleFullName" class="form-label">Optional Field</label>
+              <input type="text" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="exampleFullName" class="form-label">Number Field1<span class="required"> *</span></label>
+                <input type="number" class="form-control" id="exampleFullName" placeholder=" ">
+              </div>
+              <div class="col-md-6">
+              <label for="exampleFullName" class="form-label">Number Field2</label>
+              <input type="number" class="form-control" id="exampleFullName" placeholder=" ">
+              <p class="form-text">Days</p>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address<span class="required"> *</span></label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <p class="form-text">We'll never share your email with anyone else.</p>
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="form-label" for="exampleFormControlTextarea1">Example Text Area</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" for="">Example Rich Text Editor</label>
+              <textarea id="editor"></textarea>
+            </div>
+            <div class="row tc-mt-48">
+              <div class="col">
+                <h2>Password Creation</h2>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password<span class="required"> *</span></label>
+              <input type="password" class="form-control" id="PasswordInput" onkeyup="verifyPassword()" onchange="errorCheckPassword()">
+              <div class="form-text pw-reqs">
+                <span class="pw-description">Please review the password requirements:</span>
+                <ul>
+                  <li id="pw-req-8char">At least 8 characters</li>
+                  <li id="pw-req-upper-char">A minimum of one upper case letter</li>
+                  <li id="pw-req-number">One number</li>
+                  <li id="pw-req-special">One special character !@#$%^&*()<></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+          </div>
         </div></div>
+        </div>
       </div>
       <div class="tc-systray container-fluid g-0"><div class="row">
         <div class="tc-systray-container col-md-10 d-flex">

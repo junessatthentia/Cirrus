@@ -13,6 +13,15 @@
 
 ****** 4.0 COMPONENT STYLES ******
 *** BUTTONS
+
+****** 5.0 FORMS ******
+*** ERROR / INVALID STATES
+
+****** 6.0 UTILITY CLASSES ******
+
+
+****** 6.0 MEDIA QUERIES ******
+
 */
 .tc-register-icon {
   background-image: url("../img/platform-favicons/register_favicon_30px.png");
@@ -270,7 +279,7 @@ body {
   margin-right: 4px;
 }
 
-h1, h2, h3, h4, h5, h6, p, form.container {
+h1, h2, h3, h4, h5, h6, p {
   max-width: 768px;
 }
 
@@ -390,16 +399,12 @@ button svg.icon20.iconRight {
   margin-left: 4px;
 }
 
-.form-control, .form-label {
-  font: 500 12px/16px "Inter", sans-serif;
-}
-
 .required-statement {
   color: #939393;
   margin-bottom: 24px;
 }
 
-.required-statement .required, .form-label .required, .radio-question .required {
+.required-statement .required, .form-label .required, .radio-question .required, .form-group .required {
   color: #D32F3F;
 }
 
@@ -438,14 +443,17 @@ button svg.icon20.iconRight {
   fill: #5C3768;
 }
 
+.form-label {
+  font: 500 12px/16px "Inter", sans-serif;
+}
+
 .form-control {
   background-color: #FAFAFA;
   border: none;
   box-sizing: border-box;
-  height: 40px;
   border-radius: 0px;
   font: 400 14px/16px "Inter", sans-serif;
-  padding: 10px;
+  padding: 12px 16px;
 }
 .form-control:not(:placeholder-shown) {
   border-bottom: 1px solid #414141;
@@ -457,10 +465,27 @@ button svg.icon20.iconRight {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 2px solid #AD71C0;
+  padding: 10px 16px 11px;
 }
 
-.form-text {
+.form-text, .form-text * {
   font: 400 12px/16px "Inter", sans-serif;
+}
+
+.form-text ul {
+  margin-top: 8px;
+  padding: 0 16px 0 23px;
+}
+.form-text ul li {
+  line-height: 20px;
+}
+.form-text ul .success {
+  list-style-image: url("../svg/16/checkmark--success.svg");
+  line-height: 16px;
+}
+.form-text ul .error {
+  list-style-image: url("../svg/16/close--error.svg");
+  line-height: 16px;
 }
 
 .form-check-label {
@@ -597,10 +622,11 @@ button svg.icon20.iconRight {
 
 .chosen-container-active .chosen-choices {
   border: 2px solid #AD71C0;
+  padding: 4px 16px 5px;
 }
 
 ul.chosen-choices {
-  padding: 6px 8px;
+  padding: 6px 16px;
   background-color: #FAFAFA;
   border-bottom: 1px solid #414141;
   margin-bottom: 0;
@@ -663,6 +689,16 @@ ul.chosen-choices {
 
 .file-uploaded .fileName {
   padding: 0 16px;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: #D32F3F;
+  color: #D32F3F;
+  background-image: url("../svg/16/warning--filled-red.svg");
+}
+
+.tc-mt-48 {
+  margin-top: 48px;
 }
 
 .tc-icon {
