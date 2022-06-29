@@ -7,12 +7,15 @@
 *** THEME DEFINITIONS
 
 ****** 2.0 MIXINS ******
-
+*** HIGHLIGHTED / FOCUS
 
 ****** 3.0 PAGE LAYOUT ******
+*** THENTIA LOGOS & ICONS
+
 
 ****** 4.0 COMPONENT STYLES ******
 *** BUTTONS
+*** TOASTS
 
 ****** 5.0 FORMS ******
 *** ERROR / INVALID STATES
@@ -287,10 +290,10 @@ form.container {
   margin-left: 0;
 }
 
-h1.tc-portal-page-title {
+.tc-rightpane h1 {
   font: 600 24px/32px "Inter", sans-serif;
 }
-h1.tc-portal-page-title::after {
+.tc-rightpane h1::after {
   content: "";
   display: block;
   width: 40px;
@@ -397,6 +400,65 @@ button svg.icon20.iconLeft {
 
 button svg.icon20.iconRight {
   margin-left: 4px;
+}
+
+.toast-container {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  margin-bottom: 56px;
+}
+
+.toast {
+  border: none;
+  border-left: 4px solid;
+  border-radius: 0;
+}
+.toast .toast-header {
+  border: none;
+  padding: 8px 16px;
+}
+.toast .toast-header .tc-icon {
+  margin-right: 12px;
+}
+.toast .toast-header .tc-toast-title {
+  font: 600 16px/24px "Inter", sans-serif;
+  color: #414141;
+}
+.toast .toast-body {
+  font: 400 14px/22px "Inter", sans-serif;
+  padding: 0 16px 8px 48px;
+}
+.toast .toast-body .body-small {
+  margin: 8px 0 0 0;
+}
+
+.tc-toast-info {
+  border-color: #939393;
+}
+.tc-toast-info .toast-header .tc-icon {
+  fill: #939393;
+}
+
+.tc-toast-success {
+  border-color: #217B4D;
+}
+.tc-toast-success .toast-header .tc-icon {
+  fill: #217B4D;
+}
+
+.tc-toast-error {
+  border-color: #D32F3F;
+}
+.tc-toast-error .toast-header .tc-icon {
+  fill: #D32F3F;
+}
+
+.tc-toast-caution {
+  border-color: #FCB932;
+}
+.tc-toast-caution .toast-header .tc-icon {
+  fill: #FCB932;
 }
 
 .required-statement {
@@ -697,6 +759,25 @@ ul.chosen-choices {
   background-image: url("../svg/16/warning--filled-red.svg");
 }
 
+.is-invalid .tox-statusbar {
+  border-bottom: 1px solid #D32F3F;
+}
+.is-invalid .tox.tox-tinymce::before {
+  content: " ";
+  background-image: url("../svg/16/warning--filled-red.svg");
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 48px;
+  right: 8px;
+  z-index: 1000;
+}
+
+.invalid-feedback {
+  font-size: 12px;
+}
+
 .tc-mt-48 {
   margin-top: 48px;
 }
@@ -705,6 +786,13 @@ ul.chosen-choices {
   fill: #414141;
 }
 .tc-icon .st0 {
+  fill: none;
+}
+.tc-icon .st1 {
+  opacity: 0;
+  fill-opacity: 0;
+}
+.tc-icon .cls-1 {
   fill: none;
 }
 

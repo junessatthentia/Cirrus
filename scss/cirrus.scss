@@ -9,12 +9,15 @@
 *** THEME DEFINITIONS
 
 ****** 2.0 MIXINS ******
-
+*** HIGHLIGHTED / FOCUS
 
 ****** 3.0 PAGE LAYOUT ******
+*** THENTIA LOGOS & ICONS
+
 
 ****** 4.0 COMPONENT STYLES ******
 *** BUTTONS
+*** TOASTS
 
 ****** 5.0 FORMS ******
 *** ERROR / INVALID STATES
@@ -38,17 +41,20 @@ $success0: #FAFFFC; $success10: #E6FCF1; $success20: #ACF1CE; $success30: #70D9A
 $warning0: #FFFCF7; $warning10: #FEF8E8; $warning20: #FDEAAF; $warning30: #FFD066; $warning40: #FCB932; $warning50: #D59B24; $warning60: #A67718; $warning70: #704F0D; $warning80: #382705; $warning90: #030200;
 $error0: #FFFAFA; $error10: #FEF1F1; $error20: #FFD1D5; $error30: #FCA6AF; $error40: #FA7784; $error50: #EC5261; $error60: #D32F3F; $error70: #9B303B; $error80: #572328; $error90: #0A0506;
 
-$light: 300; $regular: 400; $medium: 500; $semibold: 600;
-
 $thentiapurple: $purple70;
 $thentiafuscia: $fuschia30;
 
+@use 'colors';
+
 // *** FONT DEFINITIONS
+$light: 300; $regular: 400; $medium: 500; $semibold: 600;
 $button-default-font: $regular 16px/20px 'Inter', sans-serif;
 $h1-platform-font: $medium 24px/40px 'Inter', sans-serif;
 $component-badge-font: $medium 14px/22px 'Inter', sans-serif;
-$input-font: $regular 14px/22px 'Inter', sans-serif;
+$reg-14-font: $regular 14px/22px 'Inter', sans-serif;
 $button-small-font: $medium 12px/12px 'Inter', sans-serif;
+$small-font: $regular 12px/16px 'Inter', sans-serif;
+$paragraph-semibold: $semibold 16px/24px 'Inter', sans-serif;
 
 // *** THEME DEFINITIONS
 $default-bg-color: $grey0;
@@ -66,6 +72,12 @@ $default-font-color: $grey85AAA;
 // // Merge the maps
 // $theme-colors: map-merge($theme-colors, $custom-colors);
 
+// ****** 2.0 MIXINS ******
+//*** HIGHLIGHTED / FOCUS
+@mixin highlight {
+  background-color: $active-link-color;
+  color: $grey0;
+}
 // *** THENTIA LOGOS & ICONS
 .tc-register-icon{
   background-image: url("../img/platform-favicons/register_favicon_30px.png");
@@ -197,8 +209,7 @@ body {
     }
   }
   .tc-tab-active{
-    background-color: $active-link-color;
-    color: $grey0;
+    @include highlight;
     .tc-icon .cls-1, .tc-icon .cls-2 {
       fill: $grey0;
     }
@@ -219,9 +230,7 @@ body {
     }
 
     &:hover, &:focus{
-      background-color: $active-link-color;
-      color: $grey0;
-
+      @include highlight;
       .tc-icon{
         fill: $grey0;
       }
@@ -340,7 +349,7 @@ form.container{
   margin-left: 0;
 }
 
-h1.tc-portal-page-title{
+.tc-rightpane h1{
   font: $semibold 24px/32px 'Inter', sans-serif;
 
   &::after{
@@ -367,7 +376,7 @@ p{
   font: $regular 16px/24px 'Inter', sans-serif;
 }
 p.body-small{
-  font: $regular 12px/16px 'Inter', sans-serif;
+  font: $small-font;
 }
 
 // *** BUTTONS
@@ -424,6 +433,64 @@ button svg.icon20.iconLeft{
   margin-right: 4px;
 }button svg.icon20.iconRight{
   margin-left: 4px;
+}
+
+// *** TOASTS
+.toast-container{
+  position: fixed;
+  right: 0;
+  top: 80px;
+  margin-bottom: 56px;
+}
+
+.toast{
+  border: none;
+  border-left: 4px solid;
+  border-radius: 0;
+  .toast-header{
+    border: none;
+    padding: 8px 16px;
+    .tc-icon{
+      margin-right: 12px;
+    }
+    .tc-toast-title{
+      font: $paragraph-semibold;
+      color: $default-font-color;
+    }
+  }
+  .toast-body{
+    font: $reg-14-font;
+    padding: 0 16px 8px 48px;
+    .body-small {
+      margin: 8px 0 0 0;
+    }
+  }
+}
+.tc-toast-info{
+  border-color: $grey70;
+  .toast-header .tc-icon{
+    fill: $grey70;
+  }
+}
+.tc-toast-success{
+  border-color: $success60;
+  .toast-header .tc-icon{
+    fill: $success60;
+  }
+}
+
+.tc-toast-error{
+  border-color: $error60;
+  .toast-header .tc-icon{
+    fill: $error60;
+  }
+}
+
+.tc-toast-caution{
+  border-color: $warning40;
+  .toast-header .tc-icon{
+    fill: $warning40;
+  }
 }
 
 // ****** 5.0 FORMS ******
@@ -501,7 +568,7 @@ button svg.icon20.iconLeft{
   }
 }
 .form-text, .form-text *{
-  font: $regular 12px/16px 'Inter', sans-serif;
+  font: $small-font;
 }
 .form-text ul{
   margin-top: 8px;
@@ -590,7 +657,7 @@ button svg.icon20.iconLeft{
 }
 
 .radio-question.legend-small{
-  font: $regular 12px/16px 'Inter', sans-serif;
+  font: $small-font;
   margin-bottom: 0;
 }
 
@@ -655,7 +722,7 @@ button svg.icon20.iconLeft{
 
 //*** Multi Select
 .chosen-container {
-  font: $input-font;
+  font: $reg-14-font;
 }
 .chosen-container-active .chosen-choices {
   border: 2px solid $purple40;
@@ -674,8 +741,7 @@ ul.chosen-choices {
 }
 
 .chosen-container .chosen-results li.highlighted {
-  background-color: $active-link-color;
-  color: $grey0;
+  @include highlight;
 }
 
 
@@ -721,9 +787,9 @@ ul.chosen-choices {
 
 .file-uploaded {
   display: inline-block;
-    background-color: $grey15;
-    width: fit-content;
-    margin: 0 8px 8px 0;
+  background-color: $grey15;
+  width: fit-content;
+  margin: 0 8px 8px 0;
 }
 
 .file-uploaded .fileName{
@@ -737,6 +803,27 @@ ul.chosen-choices {
   background-image: url("../svg/16/warning--filled-red.svg");
 }
 
+.is-invalid{
+  .tox-statusbar {
+    border-bottom: 1px solid $error60;
+  }
+  .tox.tox-tinymce::before {
+    content: " ";
+    background-image: url("../svg/16/warning--filled-red.svg");
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: 8px;
+    z-index: 1000;
+  }
+}
+
+.invalid-feedback {
+  font-size: 12px;
+}
+
 // ****** 5.0 UTILITY CLASSES ******
 .tc-mt-48{ margin-top: 48px;}
 
@@ -744,6 +831,8 @@ ul.chosen-choices {
 .tc-icon{
   fill: $default-font-color;
   .st0{ fill: none; }
+  .st1{opacity:0;fill-opacity:0;}
+  .cls-1 { fill: none;}
 }
 .tc-icon16{
   width: 16px;

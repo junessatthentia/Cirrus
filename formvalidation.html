@@ -39,7 +39,7 @@
         <div class="tc-rightpane"><div class="container">
           <div class="row">
             <div class="col">
-              <h1 class="tc-portal-page-title">Text Inputs</h1>
+              <h1>Text Inputs</h1>
               <h2>Default</h2>
               <p>See <a href="https://getbootstrap.com/docs/5.1/forms/validation/">Bootstrap Docs</a> for more on form validation.</p>
             </div>
@@ -57,46 +57,17 @@
               <label for="exampleInputEmail1" class="form-label">Text Input (w/ helper)<span class="required"> *</span></label>
               <input type="email" class="form-control is-invalid" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div class="invalid-feedback">
-                Please provide a valid city.
+                Please provide something valid.
               </div>
               <p class="form-text">This is an example of helper text. Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="exampleFullName" class="form-label">Required Field<span class="required"> *</span></label>
-                <input type="text" class="form-control is-invalid" id="exampleFullName" placeholder=" ">
-              </div>
-              <div class="col-md-6">
-              <label for="exampleFullName" class="form-label">Optional Field</label>
-              <input type="text" class="form-control is-invalid" id="exampleFullName" placeholder=" ">
-              </div>
-            </div>
-            
             <div class="form-group mb-3">
               <label class="form-label" for="exampleFormControlTextarea1">Example Text Area</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <div class="form-group mb-3">
+            <div class="form-group is-invalid mb-3">
               <label class="form-label" for="">Example Rich Text Editor</label>
               <textarea id="editor"></textarea>
-            </div>
-            <div class="row tc-mt-48">
-              <div class="col">
-                <h2>Password Creation</h2>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password<span class="required"> *</span></label>
-              <input type="password" class="form-control" id="PasswordInput" onkeyup="verifyPassword()" onchange="errorCheckPassword()">
-              <div class="form-text pw-reqs">
-                <span class="pw-description">Please review the password requirements:</span>
-                <ul>
-                  <li id="pw-req-8char">At least 8 characters</li>
-                  <li id="pw-req-upper-char">A minimum of one upper case letter</li>
-                  <li id="pw-req-number">One number</li>
-                  <li id="pw-req-special">One special character !@#$%^&*()<></li>
-                </ul>
-              </div>
             </div>
           </form>
           </div>
