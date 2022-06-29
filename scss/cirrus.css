@@ -15,6 +15,7 @@
 
 ****** 4.0 COMPONENT STYLES ******
 *** BUTTONS
+*** TAGS / BADGES
 *** TOASTS
 
 ****** 5.0 FORMS ******
@@ -402,6 +403,54 @@ button svg.icon20.iconRight {
   margin-left: 4px;
 }
 
+.badge {
+  padding: 6px 8px;
+}
+
+.tc-badge-large {
+  font: 500 16px/24px "Inter", sans-serif;
+}
+
+.tc-badge-neutral {
+  border: 1px solid #939393;
+  color: #939393;
+}
+
+.tc-badge-caution {
+  border: 1px solid #D59B24;
+  color: #D59B24;
+}
+
+.tc-badge-positive {
+  border: 1px solid #217B4D;
+  color: #217B4D;
+}
+
+.tc-badge-negative {
+  border: 1px solid #D32F3F;
+  color: #D32F3F;
+}
+
+.tc-badge-purple {
+  border: 1px solid #893FA0;
+  color: #893FA0;
+}
+
+.tc-badge-blue {
+  border: 1px solid #297BDE;
+  color: #297BDE;
+}
+
+.tc-badge-teal {
+  border: 1px solid #3A7B7D;
+  color: #3A7B7D;
+}
+
+.tc-badge-pink {
+  border: 1px solid #F589C8;
+  color: #F589C8;
+}
+
 .toast-container {
   position: fixed;
   right: 0;
@@ -774,12 +823,55 @@ ul.chosen-choices {
   z-index: 1000;
 }
 
+.tc-radioset.is-invalid, .tc-check-group.is-invalid {
+  border: 1px solid #D32F3F;
+  margin: -8px;
+  padding: 8px 36px 8px 8px;
+  background-color: #FFFAFA;
+}
+
 .invalid-feedback {
   font-size: 12px;
 }
 
 .tc-mt-48 {
   margin-top: 48px;
+}
+
+.tc-bg-neutral {
+  background-color: #ECECEC;
+}
+
+.tc-bg-caution {
+  background-color: #FDEAAF;
+}
+
+.tc-bg-positive {
+  background-color: #E6FCF1;
+}
+
+.tc-bg-negative {
+  background-color: #FFD1D5;
+}
+
+.tc-bg-purple {
+  background-color: #E8D9ED;
+}
+
+.tc-bg-blue {
+  background-color: #D1F0FE;
+}
+
+.tc-bg-teal {
+  background-color: #C0E8E7;
+}
+
+.tc-bg-pink {
+  background-color: #F589C8;
+}
+
+.text-dark {
+  color: #414141;
 }
 
 .tc-icon {

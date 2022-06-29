@@ -17,6 +17,7 @@
 
 ****** 4.0 COMPONENT STYLES ******
 *** BUTTONS
+*** TAGS / BADGES
 *** TOASTS
 
 ****** 5.0 FORMS ******
@@ -55,6 +56,7 @@ $reg-14-font: $regular 14px/22px 'Inter', sans-serif;
 $button-small-font: $medium 12px/12px 'Inter', sans-serif;
 $small-font: $regular 12px/16px 'Inter', sans-serif;
 $paragraph-semibold: $semibold 16px/24px 'Inter', sans-serif;
+$paragraph-medium: $medium 16px/24px 'Inter', sans-serif;
 
 // *** THEME DEFINITIONS
 $default-bg-color: $grey0;
@@ -434,6 +436,38 @@ button svg.icon20.iconLeft{
 }button svg.icon20.iconRight{
   margin-left: 4px;
 }
+
+// *** TAGS / BADGES
+.badge {
+  padding: 6px 8px;
+}
+.tc-badge-large{
+  font: $paragraph-medium;
+  padding: 3px 8px;
+}
+.tc-badge-neutral{ 
+  border: 1px solid $grey70;
+  color: $grey70;}
+.tc-badge-caution{
+  border: 1px solid $warning50;
+  color: $warning50;}
+.tc-badge-positive{ 
+  border: 1px solid $success60;
+  color: $success60;}
+.tc-badge-negative{
+  border: 1px solid $error60;
+  color: $error60;}
+.tc-badge-purple{ border: 1px solid $purple60;
+  color: $purple60;}
+.tc-badge-blue{
+  border: 1px solid $blue60;
+  color: $blue60;}
+.tc-badge-teal{
+  border: 1px solid colors.$teal50;
+  color: colors.$teal50;}
+.tc-badge-pink{
+  border: 1px solid $fuschia10;
+  color: $fuschia10;}
 
 // *** TOASTS
 .toast-container{
@@ -820,12 +854,28 @@ ul.chosen-choices {
   }
 }
 
+.tc-radioset.is-invalid, .tc-check-group.is-invalid {
+  border: 1px solid $error60;
+  margin: -8px;
+  padding: 8px 36px 8px 8px;
+  background-color: $error0;
+}
+
 .invalid-feedback {
   font-size: 12px;
 }
 
 // ****** 5.0 UTILITY CLASSES ******
 .tc-mt-48{ margin-top: 48px;}
+.tc-bg-neutral{ background-color: $grey35;}
+.tc-bg-caution{ background-color: $warning20;}
+.tc-bg-positive{ background-color: $success10;}
+.tc-bg-negative{ background-color: $error20;}
+.tc-bg-purple{ background-color: $purple20;}
+.tc-bg-blue{ background-color: $blue10;}
+.tc-bg-teal{ background-color: colors.$teal10;}
+.tc-bg-pink{ background-color: $fuschia10;}
+.text-dark{ color: $grey85AAA;}
 
 // ICONS 16x16
 .tc-icon{
