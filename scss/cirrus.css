@@ -824,6 +824,11 @@ ul.chosen-choices {
   padding: 0 16px;
 }
 
+.form-control.is-valid, .was-validated .form-control:valid {
+  border-color: #217B4D;
+  background-image: url("../svg/20/checkmark--success.svg");
+}
+
 .form-control.is-invalid, .was-validated .form-control:invalid {
   border-color: #D32F3F;
   color: #D32F3F;

@@ -852,7 +852,13 @@ ul.chosen-choices {
   padding: 0 16px;
 }
 
-// ERROR / INVALID STATES
+//*** VALID STATES
+.form-control.is-valid, .was-validated .form-control:valid {
+  border-color: $success60;
+  background-image: url("../svg/20/checkmark--success.svg");
+}
+
+//*** ERROR / INVALID STATES
 .form-control.is-invalid, .was-validated .form-control:invalid{
   border-color: $error60;
   color: $error60;  
