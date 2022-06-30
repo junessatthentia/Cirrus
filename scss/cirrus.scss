@@ -54,6 +54,7 @@ $h1-platform-font: $medium 24px/40px 'Inter', sans-serif;
 $component-badge-font: $medium 14px/22px 'Inter', sans-serif;
 $reg-14-font: $regular 14px/22px 'Inter', sans-serif;
 $button-small-font: $medium 12px/12px 'Inter', sans-serif;
+$small-reg-compressed: $regular 12px/12px 'Inter', sans-serif;
 $small-font: $regular 12px/16px 'Inter', sans-serif;
 $paragraph-semibold: $semibold 16px/24px 'Inter', sans-serif;
 $paragraph-medium: $medium 16px/24px 'Inter', sans-serif;
@@ -85,19 +86,6 @@ $default-font-color: $grey85AAA;
   background-image: url("../img/platform-favicons/register_favicon_30px.png");
   width: 30px;
   height: 30px;
-}
-
-.tc-breadcrumb-bar{
-  font: $component-badge-font;
-  padding: 0 8px;
-  .tc-breadcrumb{
-    text-decoration: none;
-    font: $component-badge-font;
-    padding: 10px 8px;
-  }
-  .tc-breadcrumb-current {
-    padding: 8px;
-  }
 }
 
 body {
@@ -134,17 +122,44 @@ body {
       background-color: $grey55;
     }
   }
+
+
   .tc-breadcrumb-bar{
+    padding: 0 8px;
     color: $grey5;
-    .tc-breadcrumb{
+
+    .tc-breadcrumb, .btn.tc-breadcrumb{
       color: $grey55;
-      padding: 10px 8px;
+      text-decoration: none;
+      padding: 12px 8px;
+      font: $component-badge-font;
+
+      &:hover{
+        color: $grey0;
+        text-decoration: underline;
+      }
+    }
+    .tc-breadcrumb-current{
+      vertical-align: middle;
+      font: $component-badge-font;
+      padding: 8px;
     }
   }
   #modules-button, #notifications-button, #user-button{
-    margin: 4px 0;
+    padding: 8px 16px 12px;
+    height: 47px;
+
+    &:hover{
+      background-color: $thentiapurple;
+    }
     .tc-icon{
       fill: $grey0;
+    }
+  }
+  #modules-button.active{
+    background-color: $default-bg-color;
+    .tc-icon{
+      fill: $default-font-color;
     }
   }
   .notifications-count {
@@ -156,8 +171,8 @@ body {
     background-color: $error60;
     color: $grey0;
     font-size: 10px;
-    bottom: 2px;
-    right: 4px;
+    bottom: 8px;
+    right: 6px;
   }
   #user-button {
     .tc-icon {
@@ -634,7 +649,10 @@ button svg.icon20.iconLeft{
   }
 }
 .checkbox-text{
-  margin: -2px 0 0 21px;
+  margin: 0 0 0 21px;
+}
+.form-check-inline{
+  padding-top: 4px;
 }
 
 .tox.tox-tinymce {
@@ -690,9 +708,16 @@ button svg.icon20.iconLeft{
   margin-left: 4px;
 }
 
-.radio-question.legend-small{
-  font: $small-font;
+//*** RADIO
+.radio-question, .tc-check-question{
+  font: $default-font;
   margin-bottom: 0;
+}
+.radio-question.legend-small, .tc-check-question.legend-small{
+  font: $small-font;
+}
+.tc-radioset .container, .tc-checkset .container {
+  margin-top: 8px;
 }
 
 .form-check-input[type="radio"] {
@@ -701,9 +726,6 @@ button svg.icon20.iconLeft{
 
   border-radius: 100%;
   border: 1px solid $active-link-color;
-  
-  // Radio
-  // -----
 
   &::before {
     position: relative;
@@ -854,15 +876,18 @@ ul.chosen-choices {
   }
 }
 
-.tc-radioset.is-invalid, .tc-check-group.is-invalid {
+.tc-radioset.is-invalid, .tc-check-group.is-invalid, .tc-checkset.is-invalid {
   border: 1px solid $error60;
   margin: -8px;
   padding: 8px 36px 8px 8px;
-  background-color: $error0;
+  background: $error0 url("../svg/16/warning--filled-red.svg") no-repeat right 8px top 8px; 
 }
 
 .invalid-feedback {
-  font-size: 12px;
+  font: $small-reg-compressed;
+}
+.tc-check-group .invalid-feedback {
+  margin-left: 21px;
 }
 
 // ****** 5.0 UTILITY CLASSES ******

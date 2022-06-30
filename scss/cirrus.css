@@ -33,19 +33,6 @@
   height: 30px;
 }
 
-.tc-breadcrumb-bar {
-  font: 500 14px/22px "Inter", sans-serif;
-  padding: 0 8px;
-}
-.tc-breadcrumb-bar .tc-breadcrumb {
-  text-decoration: none;
-  font: 500 14px/22px "Inter", sans-serif;
-  padding: 10px 8px;
-}
-.tc-breadcrumb-bar .tc-breadcrumb-current {
-  padding: 8px;
-}
-
 body {
   background: #FFFFFF;
   font: 400 16px/24px "Inter", sans-serif;
@@ -81,17 +68,39 @@ body {
   background-color: #C9C9C9;
 }
 .tc-titlebar .tc-breadcrumb-bar {
+  padding: 0 8px;
   color: #FEFEFE;
 }
-.tc-titlebar .tc-breadcrumb-bar .tc-breadcrumb {
+.tc-titlebar .tc-breadcrumb-bar .tc-breadcrumb, .tc-titlebar .tc-breadcrumb-bar .btn.tc-breadcrumb {
   color: #C9C9C9;
-  padding: 10px 8px;
+  text-decoration: none;
+  padding: 12px 8px;
+  font: 500 14px/22px "Inter", sans-serif;
+}
+.tc-titlebar .tc-breadcrumb-bar .tc-breadcrumb:hover, .tc-titlebar .tc-breadcrumb-bar .btn.tc-breadcrumb:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.tc-titlebar .tc-breadcrumb-bar .tc-breadcrumb-current {
+  vertical-align: middle;
+  font: 500 14px/22px "Inter", sans-serif;
+  padding: 8px;
 }
 .tc-titlebar #modules-button, .tc-titlebar #notifications-button, .tc-titlebar #user-button {
-  margin: 4px 0;
+  padding: 8px 16px 12px;
+  height: 47px;
+}
+.tc-titlebar #modules-button:hover, .tc-titlebar #notifications-button:hover, .tc-titlebar #user-button:hover {
+  background-color: #782B90;
 }
 .tc-titlebar #modules-button .tc-icon, .tc-titlebar #notifications-button .tc-icon, .tc-titlebar #user-button .tc-icon {
   fill: #FFFFFF;
+}
+.tc-titlebar #modules-button.active {
+  background-color: #FFFFFF;
+}
+.tc-titlebar #modules-button.active .tc-icon {
+  fill: #414141;
 }
 .tc-titlebar .notifications-count {
   position: absolute;
@@ -102,8 +111,8 @@ body {
   background-color: #D32F3F;
   color: #FFFFFF;
   font-size: 10px;
-  bottom: 2px;
-  right: 4px;
+  bottom: 8px;
+  right: 6px;
 }
 .tc-titlebar #user-button .tc-icon {
   width: 12px;
@@ -409,6 +418,7 @@ button svg.icon20.iconRight {
 
 .tc-badge-large {
   font: 500 16px/24px "Inter", sans-serif;
+  padding: 3px 8px;
 }
 
 .tc-badge-neutral {
@@ -616,7 +626,11 @@ button svg.icon20.iconRight {
 }
 
 .checkbox-text {
-  margin: -2px 0 0 21px;
+  margin: 0 0 0 21px;
+}
+
+.form-check-inline {
+  padding-top: 4px;
 }
 
 .tox.tox-tinymce {
@@ -672,9 +686,17 @@ button svg.icon20.iconRight {
   margin-left: 4px;
 }
 
-.radio-question.legend-small {
-  font: 400 12px/16px "Inter", sans-serif;
+.radio-question, .tc-check-question {
+  font: 400 16px/24px "Inter", sans-serif;
   margin-bottom: 0;
+}
+
+.radio-question.legend-small, .tc-check-question.legend-small {
+  font: 400 12px/16px "Inter", sans-serif;
+}
+
+.tc-radioset .container, .tc-checkset .container {
+  margin-top: 8px;
 }
 
 .form-check-input[type=radio] {
@@ -823,15 +845,19 @@ ul.chosen-choices {
   z-index: 1000;
 }
 
-.tc-radioset.is-invalid, .tc-check-group.is-invalid {
+.tc-radioset.is-invalid, .tc-check-group.is-invalid, .tc-checkset.is-invalid {
   border: 1px solid #D32F3F;
   margin: -8px;
   padding: 8px 36px 8px 8px;
-  background-color: #FFFAFA;
+  background: #FFFAFA url("../svg/16/warning--filled-red.svg") no-repeat right 8px top 8px;
 }
 
 .invalid-feedback {
-  font-size: 12px;
+  font: 400 12px/12px "Inter", sans-serif;
+}
+
+.tc-check-group .invalid-feedback {
+  margin-left: 21px;
 }
 
 .tc-mt-48 {
