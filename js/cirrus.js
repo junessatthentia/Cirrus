@@ -1,3 +1,22 @@
+// *** File Picker
+$(document).on('change', '.file-input', function() {
+        
+
+  var filesCount = $(this)[0].files.length;
+  
+  var textbox = $(this).prev();
+
+  var files = $(this)[0].files;
+
+  var text="";
+  
+  for (let i = 0; i < files.length; i++) {
+    let file = files.item(i);
+    text += '<div class="file-uploaded"><span class="fileName">' + file.name + '</span><button class="btn btn-link"><svg id="icon" class="tc-icon tc-icon16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" ><defs><style>.cls-1{fill:#000000;}.cls-2{fill:#000000;}</style></defs><title>close</title><polygon class="cls-1" points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"/><rect class="cls-2"/></svg></button></div>';
+  }
+  document.getElementById("files-uploaded").innerHTML += text;
+});
+
 // *** Rich Text Editor
 tinymce.init({
   selector: 'textarea#editor',

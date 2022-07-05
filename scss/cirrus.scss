@@ -846,6 +846,20 @@ ul.chosen-choices {
   background-color: $grey15;
   width: fit-content;
   margin: 0 8px 8px 0;
+
+  .tc-icon .cls-1 {
+    fill: $active-link-color;
+  }
+
+  .btn{
+    &:hover{
+      background-color: $active-link-color;
+
+      .tc-icon .cls-1{
+        fill: $grey0;
+      }
+    }
+  }
 }
 
 .file-uploaded .fileName{

@@ -819,6 +819,15 @@ ul.chosen-choices {
   width: fit-content;
   margin: 0 8px 8px 0;
 }
+.file-uploaded .tc-icon .cls-1 {
+  fill: #782B90;
+}
+.file-uploaded .btn:hover {
+  background-color: #782B90;
+}
+.file-uploaded .btn:hover .tc-icon .cls-1 {
+  fill: #FFFFFF;
+}
 
 .file-uploaded .fileName {
   padding: 0 16px;
